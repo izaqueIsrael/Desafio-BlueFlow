@@ -2,7 +2,7 @@
 
 Crie uma aplicação **API** com proteção de acesso (**autenticação + autorização**) que **liste, pesquise e permita favoritar vídeos do YouTube com um CRUD de favoritos** usando a **API oficial e gratuita do YouTube**.
 
-> ⚠️ **Se atente as regras!**
+⚠️ **Se atente as regras!**
 
 ## 🎯 Objetivo
 Entregar um sistema **simples, funcional e bem estruturado**, com **backend** construído em **microsserviços** (ex.: `auth-service`, `videos-service`, `favorites-service`).
@@ -54,6 +54,6 @@ Entregar um sistema **simples, funcional e bem estruturado**, com **backend** co
 - Não se preocupe em não conseguir implementar algo, analisarei o trabalho como um todo e em que ponto parou.
 
 ## Atenção!
-> Mande o Pronto para o email **izaque.vieira@contabilize.eti.br** com o link do repositório público do seu desafio.
+Mande o Pronto para o email **izaque.vieira@contabilize.eti.br** com o link do repositório público do seu desafio.
 
 Prove seu valor e boa sorte!
