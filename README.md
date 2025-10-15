@@ -25,7 +25,7 @@ Entregar um sistema **simples, funcional e bem estruturado**, com **backend** co
 ---
 
 ## 💾 Persistência
-- Pode ser qualquer banco relacional ou não relacional (**preferência pelo PostgreSQL**).
+- Pode ser qualquer banco relacional ou não relacional (**preferência pelo PostgreSQL e/ou MongoDB**).
 - Modele as tabelas/coleções **mínimas** para: `users`, `favorites`.
 
 ---
