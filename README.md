@@ -10,10 +10,10 @@ Entregar um sistema **simples, funcional e bem estruturado**, com **backend** co
 ---
 
 ## 🏗️ Arquitetura (exigida)
-- Separar em **frontend** e **backend**.
 - **Microsserviços** no backend (ex.: serviço de **auth**, **vídeos**, **favoritos**).
-- Comunicação entre serviços via **HTTP** (ou mensageria simples, se desejar, mas não é obrigatório).
+- Comunicação entre serviços via RabbitMQ.
 - Aplicar **POO** e **design patterns** adequados (**Factory**, **Strategy**, **Adapter**, etc.).
+- Testes automatizados com **Jest** ou similares.
 
 
 ## ✅ Funcionalidades Mínimas
