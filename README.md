@@ -20,7 +20,7 @@ Entregar um sistema **simples, funcional e bem estruturado**, com **backend** co
 - **Autenticação/Autorização**: fluxo de login e controle de acesso a rotas protegidas.
 - **Listagem/Pesquisa**: consumir a **API gratuita do YouTube** para listar e pesquisar vídeos.
 - **Favoritos**: marcar/desmarcar vídeos como favoritos **por usuário autenticado**.
-- **Persistência**: armazenar **favoritos** e **usuários** (banco à sua escolha; **preferência: PostgreSQL**).
+- **Persistência**: armazenar **favoritos** e **usuários** (banco à sua escolha; **preferência: PostgreSQL e/ou MongoDB**).
 
 ---
 
