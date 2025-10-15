@@ -5,7 +5,7 @@ Crie uma aplicação **API** com proteção de acesso (**autenticação + autori
 > ⚠️ **Se atente as regras!**
 
 ## 🎯 Objetivo
-Entregar um sistema **simples, funcional e bem estruturado**, com ***backend** construído em **microsserviços** (ex.: `auth-service`, `videos-service`, `favorites-service`).
+Entregar um sistema **simples, funcional e bem estruturado**, com **backend** construído em **microsserviços** (ex.: `auth-service`, `videos-service`, `favorites-service`).
 
 ---
 
