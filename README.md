@@ -54,6 +54,6 @@ Entregar um sistema **simples, funcional e bem estruturado**, com **backend** co
 - Não se preocupe em não conseguir implementar algo, analisarei o trabalho como um todo e em que ponto parou.
 
 ## Atenção!
-Mande o Pronto para o email **izaque.vieira@contabilize.eti.br** com o link do repositório público do seu desafio até às 23:59:59h do dia 16 de novembro de 2025 no fuso horário de Brasília.
+Para entrega, faça um **FORK** desse repositório e mande um Pull Request do seu desafio até às 23:59:59h do dia 16 de outubro de 2025 no fuso horário de Brasília.
 
 Prove seu valor e boa sorte!
