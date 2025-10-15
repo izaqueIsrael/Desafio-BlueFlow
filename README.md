@@ -1,3 +1,19 @@
+# Canto do Gabriel/Decisões&Notes
+
+Optei por utilizar docker por estar trabalhando com microsserviços.
+### Setup
+
+antes de iniciar a aplicação, sete as **environment variables** no .env:
+```
+MONGO_USER=
+MONGO_PASSWORD=
+MONGO_DB=
+MONGO_PORT=
+AUTH_API_PORT=
+```
+
+para iniciar a aplicação, na raiz do projeto rode `docker compose up --build`
+
 # Desafio BlueFlow
 
 Crie uma aplicação **API** com proteção de acesso (**autenticação + autorização**) que **liste, pesquise e permita favoritar vídeos do YouTube com um CRUD de favoritos** usando a **API oficial e gratuita do YouTube**.
