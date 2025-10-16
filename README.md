@@ -1,6 +1,13 @@
 # Canto do Gabriel/Decisões&Notes
 
 Optei por utilizar docker por estar trabalhando com microsserviços.
+
+auth-service:
+* api recebe as credenciais no formato: `{ "name": "username", "pass": "pass" }`
+* fazer login: `http://localhost:3000/api/auth/login` - possíveis respostas:  `BAD_REQUEST` `UNAUTHORIZED` `INTERNAL_SERVER_ERROR` `OK`
+* registrar user: `http://localhost:3000/api/auth/register` - possíveis respostas: `BAD_REQUEST` `CONFLICT` `CREATED`
+* Ao registrar conta, dados sensíveis vão criptografados para o banco
+* Ao logar, é retornado o token JWT
 ### Setup
 
 antes de iniciar a aplicação, sete as **environment variables** no .env:
@@ -10,6 +17,7 @@ MONGO_PASSWORD=
 MONGO_DB=
 MONGO_PORT=
 AUTH_API_PORT=
+JWT_SECRET=
 ```
 
 para iniciar a aplicação, na raiz do projeto rode `docker compose up --build`
