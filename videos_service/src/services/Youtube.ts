@@ -84,7 +84,7 @@ export class YouTubeAPI {
   try {
     const params: Record<string, any> = {
       part: "snippet",
-      id: videoIds, // Vídeos separados por vírgula
+      id: videoIds,
       key: this.apiKey,
     };
 

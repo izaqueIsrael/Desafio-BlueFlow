@@ -1,4 +1,4 @@
-import amqplib, { Channel } from "amqplib"; // tipos
+import amqplib, { Channel } from "amqplib";
 import { env } from "./env";
 
 class RabbitMQ {
