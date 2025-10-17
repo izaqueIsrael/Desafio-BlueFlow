@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "4f99c9bd-fb1b-4ad6-a06d-1531957eeddb",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49342408",
+		"_collection_link": "https://gabrieldasnevespinheiro-1609029.postman.co/workspace/Gabriel-Pinheiro's-Workspace~ecd942c6-4970-4f52-824e-6318601a3ca2/collection/49342408-4f99c9bd-fb1b-4ad6-a06d-1531957eeddb?action=share&source=collection_link&creator=49342408"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"gabriel\",\r\n    \"pass\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"gabriel\",\r\n    \"pass\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/favorites?=",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGYwM2Y5OWM0ZmNmODA4Y2NiYWRkZGYiLCJ1c2VybmFtZSI6ImdhYnJpZWwiLCJpYXQiOjE3NjA2NjE0MjB9.dpCvQGx-lxyf5CGEOonWbb85OH6bFn1CRItNMN1r6KA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/api/favorites?=",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"favorites"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/videos?q=Guitarra",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGYwM2Y5OWM0ZmNmODA4Y2NiYWRkZGYiLCJ1c2VybmFtZSI6ImdhYnJpZWwiLCJpYXQiOjE3NjA2NjE0MjB9.dpCvQGx-lxyf5CGEOonWbb85OH6bFn1CRItNMN1r6KA",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoId\": \"0BBu_dQg3cg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/videos?q=Guitarra",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Guitarra"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

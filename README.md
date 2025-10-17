@@ -1,3 +1,56 @@
+# Canto do Gabriel/Decisões&Notes
+
+Optei por utilizar docker por estar trabalhando com microsserviços.
+
+antes de iniciar a aplicação, sete as **environment variables** no .env:
+```
+MONGO_USER=
+MONGO_PASSWORD=
+MONGO_DB=
+MONGO_PORT=
+AUTH_API_PORT=
+JWT_SECRET=
+RABBIT_USER=
+RABBIT_PASS=
+VIDEOS_API_PORT=
+YOUTUBE_API_KEY=
+```
+
+para iniciar a aplicação, na raiz do projeto rode `docker compose up --build`
+
+Explicando:
+    auth-service: responsavel pelo login/registro (nao interage com rabbit)
+    videos-service: tem logica de busca de videos e registra os favoritos por mensageria
+    fvorites-service: recebe os favoritados por mensageria e adiciona no banco
+
+auth-service:
+* api recebe as credenciais no formato: `{ "name": "username", "pass": "pass" }`
+* fazer login: POST `http://localhost:3000/api/auth/login` - possíveis respostas:  `BAD_REQUEST` `UNAUTHORIZED` `INTERNAL_SERVER_ERROR` `OK`
+* registrar user: POST `http://localhost:3000/api/auth/register` - possíveis respostas: `BAD_REQUEST` `CONFLICT` `CREATED`
+* Ao registrar conta, dados sensíveis vão criptografados para o banco
+* Ao logar, é retornado o token JWT
+### Setup
+
+videos-service:
+* possui middleware de autenticação
+* enviar no authorization o token retornado ao fazer login
+* listar videos: GET `http://localhost:3001/api/videos?q=Query`
+* registrar favorito: POST `http://localhost:3001/api/videos`
+* ver favoritos: GET `http://localhost:3001/api/favorites`
+* Ao logar, é retornado o token JWT
+
+### `postman.json` > Contendo modelos das requests no postman
+
+favorite-service:
+* serviço simples
+* recebe mensagens e registra o video como favorito
+
+### Pendências
+* testes jest > ficou pouco tempo, nao é o suficiente para eu entender e criar
+* front-end > tempo também, não é dificil adicionar um conteiner pro front tbm
+*
+
+
 # Desafio BlueFlow
 
 Crie uma aplicação **API** com proteção de acesso (**autenticação + autorização**) que **liste, pesquise e permita favoritar vídeos do YouTube com um CRUD de favoritos** usando a **API oficial e gratuita do YouTube**.
