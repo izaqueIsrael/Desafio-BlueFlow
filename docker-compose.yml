@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   mongo:
     image: mongo:6
@@ -12,6 +10,17 @@ services:
       - "${MONGO_PORT}:27017"
     volumes:
       - mongo_storage:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBIT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBIT_PASS}
 
   auth-service:
     build: ./auth_service
@@ -26,6 +35,24 @@ services:
     environment:
       API_PORT: ${AUTH_API_PORT}
       MONGO_URI: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo:27017/${MONGO_DB}?authSource=admin
-
+      JWT_SECRET: ${JWT_SECRET}
+    
+  videos-service:
+    build: ./videos_service
+    container_name: videos-service
+    restart: always
+    depends_on:
+      - mongo
+      - rabbitmq
+    env_file:
+      - .env
+    ports:
+      - "${VIDEOS_API_PORT}:${VIDEOS_API_PORT}"
+    environment:
+      API_PORT: ${VIDEOS_API_PORT}
+      MONGO_URI: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo:27017/${MONGO_DB}?authSource=admin
+      RABBIT_URI: amqp://${RABBIT_USER}:${RABBIT_PASS}@rabbitmq:5672/
+      YOUTUBE_API_KEY: ${YOUTUBE_API_KEY}
+      JWT_SECRET: ${JWT_SECRET}
 volumes:
   mongo_storage:
